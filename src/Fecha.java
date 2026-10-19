@@ -1,14 +1,16 @@
 public class Fecha {
-    int mes;
-    int año;
-    int dia;
+    private int mes;
+    private int dia;
+    private int anio;
 
-    public Fecha(int mes, int dia, int año) {
+    // Constructor que inicializa las tres variables de instancia
+    public Fecha(int mes, int dia, int anio) {
         this.mes = mes;
         this.dia = dia;
-        this.año = año;
+        this.anio = anio;
     }
 
+    // Métodos Getters y Setters
     public int getMes() {
         return mes;
     }
@@ -25,15 +27,17 @@ public class Fecha {
         this.dia = dia;
     }
 
-    public int getAño() {
-        return año;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
-    void MostrarFecha(){
-        System.out.println("La fecha de hoy es: " + getMes() + " / " + getDia() + " / " + getAño());
+
+    // Método para mostrar la fecha separada por barras diagonales (/)
+    public void mostrarFecha() {
+        System.out.println(getMes() + "/" + getDia() + "/" + getAnio());
     }
 }
 
